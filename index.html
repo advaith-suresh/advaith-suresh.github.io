@@ -2,23 +2,54 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css">
-    <title>Advaith's Personal Website</title>
+    <title>Advaith | Home</title>
+    <link rel="icon" type="image/x-icon" href="images/thinking_favicon.png">
   </head>
 </html>
 
 <body>
 
+  <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    } 
+  </script>
 
   <div class="topnav">
-    <a class="left">Advaith Suresh</a> 
-    <a href="blog.html" class="right">Blog</a>
-    <a href="music.html" class="right">Music</a>
-    <a href="poetry.html" class="right">Poetry</a>
+    <a style="float:left">Advaith Suresh</a> 
+    <a href="blog.html">Blog</a>
+    <!-- Element 2: dropdown -->
+    <div class="dropdown">
+      <a onmouseover="myFunction()" href="music.html">Music</a>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="tabs.html">Tabs</a>
+      </div>
+    </div>
+    <a href="poetry.html">Poetry</a>
   </div>
 
-  <div class="wrapper-main">
+  <div class="wrapper-main" style="background-image: url();">
     <div class="clearfix">
-      <img src="profile_pic.JPG" class="right">
+      <figure class="right">
+        <img src="images/profile_pic.JPG">
+        <figcaption>Surbahar 2023</figcaption>
+      </figure>
       <p class="margins">
         Hey there! I'm Advaith, currently a third year student at IIT Bombay trying to pursue 
         anything other than my B.Tech in Engineering Physics. My interest currently lies in Music, 
@@ -34,6 +65,7 @@
     <a href="https://github.com/advaith-suresh">Github</a>
     <a href="https://www.instagram.com/adv.srs/">Insta</a>
     <p>Advaith Suresh . 2023</p>
+    <p><a href="https://www.freepik.com/free-photo/smooth-white-stucco-wall_1037198.htm#query=rough%20paper&position=10&from_view=keyword&track=ais">Background Image by kues1</a> on Freepik</p>
   </footer>
 
 
